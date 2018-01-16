@@ -1,7 +1,3 @@
-//function showDate(){
-  //document.getElementById('datePlace').innerHTML = Date();
-//}
-
 function displayTime(){
   var date = new Date();
   var year= date.getYear();
@@ -36,16 +32,12 @@ if(seconds < 10){
 }
 
 
-var time = dayArray[day]+ " " +monthDay+ " "+monthArray[month]+ " " +year+ " | " +hours+ " : " +minutes+ " : " +seconds;
+var time = dayArray[day]+ ","+ " " +monthArray[month]+ " " +monthDay+ ","+ " " +year+ " | " +hours+ " : " +minutes+ " : " +seconds;
 document.getElementById("showDate").innerHTML = time;
-// clock.textContent = dayArray[day]+ " " +monthDay+ " "+monthArray[month]+ " " +year+ " | " +hours+ " : " +minutes+ " : " +seconds;
-// clock.innerText = "" +dayArray[day]+ " " +monthDay+ " "+monthArray[month]+ " " +year+ " | " +hours+ " : " +minutes+ " : " +seconds;
 
-//setTimout("displayTime()", 1000);
+setTimeout("displayTime()",500)
+
 }
-
-// displayTime();
-
 
 
 //https://www.youtube.com/watch?v=HyhVjHGb19k&t=1108s
