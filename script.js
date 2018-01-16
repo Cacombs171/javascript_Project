@@ -12,7 +12,7 @@ function displayTime(){
   var month = date.getMonth();
   var monthDay = date.getDate();
   var dayArray = new Array("Sunday","Monday","Tuesday","WeWednesday","Thursday","Friday","Saturday");
-  var monthArray = new Array("August","September","October","November","December","January","Febuary","March","April","May")
+  var monthArray = new Array("January","Febuary","March","April","May","June","July","August","September","October","November","December")
 
   var currentTime = new Date();
   var hours = currentTime.getHours();
@@ -35,14 +35,16 @@ if(seconds < 10){
   seconds = "0" + seconds;
 }
 
-var clock = document.getElementById("showDate");
-clock.textContent = "" +dayArray[day]+ " " +monthDay+ " "+monthArray[month]+ " " +year+ " | " +hours+ " : " +minutes+ " : " +seconds;
-clock.innerText = "" +dayArray[day]+ " " +monthDay+ " "+monthArray[month]+ " " +year+ " | " +hours+ " : " +minutes+ " : " +seconds;
 
-setTimout("displayTime()", 1000);
+var time = dayArray[day]+ " " +monthDay+ " "+monthArray[month]+ " " +year+ " | " +hours+ " : " +minutes+ " : " +seconds;
+document.getElementById("showDate").innerHTML = time;
+// clock.textContent = dayArray[day]+ " " +monthDay+ " "+monthArray[month]+ " " +year+ " | " +hours+ " : " +minutes+ " : " +seconds;
+// clock.innerText = "" +dayArray[day]+ " " +monthDay+ " "+monthArray[month]+ " " +year+ " | " +hours+ " : " +minutes+ " : " +seconds;
+
+//setTimout("displayTime()", 1000);
 }
 
-displayTime();
+// displayTime();
 
 
 
